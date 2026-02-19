@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | UNESCO Heritage</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
+    />
+    <style>
+      .main-header-title {
+        color: #3f3dbf;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .navbar-custom {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 0;
+      }
+      .navbar-custom .nav-link.active,
+      .navbar-custom .nav-link:focus,
+      .navbar-custom .nav-link:hover {
+        color: #34bf49 !important;
+      }
+      .contact-section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .contact-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+      .section-underline {
+        width: 60px;
+        height: 4px;
+        background: #34bf49;
+        margin: 0 auto 1.5rem auto;
+        border-radius: 2px;
+      }
+      .contact-info {
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 2rem;
+        border-top: 2px solid #34bf49;
+      }
+      .contact-form {
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 2rem;
+        border-top: 2px solid #34bf49;
+      }
+      .contact-icon {
+        font-size: 1.5rem;
+        color: #34bf49;
+        margin-right: 0.5rem;
+      }
+      .footer {
+        background: #222;
+        color: #fff;
+      }
+      .footer .fw-bold {
+        color: #fff !important;
+      }
+      .footer .credits a {
+        color: #34bf49;
+      }
+      .btn-contact {
+        background: #34bf49;
+        color: #fff;
+        border: none;
+      }
+      .btn-contact:hover {
+        background: #2a9c3a;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid py-3">
+        <div class="main-header-title">UNESCO HERITAGE</div>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/dashboard1">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/story">Storyboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="contact-section container">
+        <div class="contact-title">CONTACT</div>
+        <div class="section-underline"></div>
+        <div class="text-center mb-4" style="color: #666; font-size: 1.1rem">
+          We value your feedback, inquiries and collaboration opportunities as
+          we shape the future of education in the region. Whether you're an
+          educator, a policymaker or simply curious about our work, we invite
+          you to get in touch.
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <div class="mb-3">
+                <span class="contact-icon bi bi-geo-alt"></span>
+                <strong>Location:</strong><br />United Nations Educational,
+                Scientific and Cultural Organization, Paris, France
+              </div>
+              <div class="mb-3">
+                <span class="contact-icon bi bi-envelope"></span>
+                <strong>Email:</strong><br />visits@unesco.org
+              </div>
+              <div class="mb-3">
+                <span class="contact-icon bi bi-telephone"></span>
+                <strong>Call:</strong><br />+33 (0)1 45 68 10 00
+              </div>
+              <div class="mb-3">
+                <iframe
+                  src="https://www.google.com/maps?q=United+Nations+Educational,+Scientific+and+Cultural+Organization,+Paris,+France&output=embed"
+                  width="100%"
+                  height="180"
+                  style="border: 0; border-radius: 8px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form class="contact-form">
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div class="col">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Type your message..."
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-contact">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer light-background mt-5">
+      <div class="container text-center py-4">
+        <div class="fw-bold" style="font-size: 1.5rem; color: #fff">
+          UNESCO Heritage
+        </div>
+        <div class="mb-2" style="font-style: italic">
+          Building peace in the minds of men and women.
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+  </body>
+</html>
